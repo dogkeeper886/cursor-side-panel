@@ -5,7 +5,9 @@
   "description": "Opens Cursor's agents web app in Chrome's side panel, beside any page.",
   "permissions": [
     "sidePanel",
-    "declarativeNetRequest"
+    "declarativeNetRequest",
+    "storage",
+    "contextMenus"
   ],
   "host_permissions": [
     "https://*.cursor.com/*",
@@ -15,6 +17,13 @@
   "background": {
     "service_worker": "background.js"
   },
+  "content_scripts": [
+    {
+      "matches": ["https://cursor.com/*"],
+      "js": ["cursor-bridge.js"],
+      "all_frames": true
+    }
+  ],
   "side_panel": {
     "default_path": "panel.html"
   },
