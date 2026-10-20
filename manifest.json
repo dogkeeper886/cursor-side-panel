@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Cursor Side Panel",
+  "version": "0.1.0",
+  "description": "Opens Cursor's agents web app in Chrome's side panel, beside any page.",
+  "permissions": [
+    "sidePanel",
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
+    "https://*.cursor.com/*",
+    "https://*.cursor.sh/*",
+    "https://*.workos.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "panel.html"
+  },
+  "action": {
+    "default_title": "Open Cursor"
+  }
+}
