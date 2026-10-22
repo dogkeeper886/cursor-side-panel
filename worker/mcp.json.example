@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "testlink": {
+      "command": "/usr/bin/node",
+      "args": ["/path/to/testlink-mcp/dist/index.js"],
+      "env": {
+        "TESTLINK_URL": "http://your-testlink-host/testlink",
+        "TESTLINK_API_KEY": "your_api_key_here"
+      }
+    }
+  }
+}
